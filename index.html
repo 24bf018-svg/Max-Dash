@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
@@ -291,15 +291,15 @@ function draw(){
   ctx.fillStyle=theme.spikeFill; const toff=(bgScroll*0.6)%240;
   for(let x=-240;x<W+240;x+=240){ pine(x-toff+50,lowerY+4,11); pine(x-toff+150,lowerY+6,8); }
 
-  if(state==='win') overlay('STAGE CLEAR!', 'タップで次のステージ → '+LEVELS[stage+1].name, '#ffd21e');
-  else if(state==='allclear') overlay('ALL CLEAR!', '全ステージ制覇！ タップでステージ選択へ', '#6fffa0');
+      if(state==='win') overlay('STAGE CLEAR!', 'Tap to next stage -> '+LEVELS[stage+1].name, '#ffd21e');
+      else if(state==='allclear') overlay('ALL CLEAR!', 'All stages completed! Tap to stage select', '#6fffa0');
 }
 
 function drawSelect(){
   ctx.textAlign='center';
   ctx.fillStyle='#f3e7ff'; ctx.shadowColor='#c98bff'; ctx.shadowBlur=22;
   ctx.font='bold 44px Trebuchet MS'; ctx.fillText('MAX DASH', W/2, 72); ctx.shadowBlur=0;
-  ctx.fillStyle='#c4a8ee'; ctx.font='bold 15px Trebuchet MS'; ctx.fillText('MaxGames — ステージを選択', W/2, 103);
+      ctx.fillStyle='#c4a8ee'; ctx.font='bold 15px Trebuchet MS'; ctx.fillText('MaxGames - Select Stage', W/2, 103);
   ctx.font='bold 12px Trebuchet MS'; ctx.fillStyle='#d8c8f5';
   ctx.fillText('SPACE / ENTER / ↑ / CLICK / TAP = JUMP', W/2, 126);
 
